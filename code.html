@@ -1,0 +1,763 @@
+<html>
+<head>
+  <title>FoodMart E-Commerce</title>
+  <link rel="stylesheet" href="ecommerce.css"/>
+</head>
+<body>
+
+  <header>
+    <div class="overlay">
+      <h1>🍔 FoodMart E-Commerce</h1>
+      <p>Makanan Enak • Harga Hemat • Belanja Mudah</p>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#beranda">Beranda</a>
+        <ul class="dropdown">
+          <li><a href="#promo">Promo</a></li>
+          <li><a href="#rekomendasi">Rekomendasi</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#ringan">Makanan Ringan</a>
+        <ul class="dropdown">
+          <li><a href="#chips">Keripik</a></li>
+          <li><a href="#snack">Snack</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#berat">Makanan Berat</a>
+        <ul class="dropdown">
+          <li><a href="#nasi">Nasi</a></li>
+          <li><a href="#mie">Mie</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#minuman">Minuman</a>
+        <ul class="dropdown">
+          <li><a href="#coffee">Coffee</a></li>
+          <li><a href="#tea">Tea</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#dessert">Dessert</a>
+        <ul class="dropdown">
+          <li><a href="#cake">Cake</a></li>
+          <li><a href="#icecream">Ice Cream</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="right-menu">
+      <button onclick="openRegister()">Register</button>
+      <button onclick="openCart()">🛒 Cart (<span id="cart-count">0</span>)</button>
+    </div>
+  </nav>
+
+  <section class="page" id="beranda">
+    <h2>🔥 Produk Populer</h2>
+
+    <div class="product-container">
+
+      <div class="card">
+        <img src="wagyu.jpg" onclick="addToCart('wagyu',700000)">
+        <h3>wagyu</h3>
+        <p>premium wagyu done by a specialized japanese chef.</p>
+        <h4>Rp700.000</h4>
+        <button onclick="buyNow('Burger')">Buy</button>
+      </div>
+
+      <div class="card">
+        <img src="cheesepizza.jpg" onclick="addToCart('Pizza',50000)">
+        <h3>Pizza Italiano</h3>
+        <p>Pizza lezat topping lengkap.</p>
+        <h4>Rp70.000</h4>
+        <button onclick="buyNow('Pizza')">Buy</button>
+      </div>
+
+      <div class="card">
+        <img src="rabokki.jpg" onclick="addToCart('rabokki',50000)">
+        <h3>rabokki</h3>
+        <p>noodles mixed with tteokbokki.</p>
+        <h4>Rp50.000</h4>
+        <button onclick="buyNow('rabokki')">Buy</button>
+      </div>
+
+      <div class="card">
+        <img src="friedriceyum.jpg" onclick="addToCart('Salad',28000)">
+        <h3>fried rice</h3>
+        <p>rice that is fried.</p>
+        <h4>Rp28.000</h4>
+        <button onclick="buyNow('fried rice')">Buy</button>
+      </div>
+
+      <div class="card">
+        <img src="carbonarayum.jpg"onclick="addToCart('carbonara pasta',30000)">
+        <h3>carbonara pasta</h3>
+        <p>cremiest pasta there is.</p>
+        <h4>Rp30.000</h4>
+        <button onclick="buyNow('carbonara pasta')">Buy</button>
+      </div>
+
+      <div class="card">
+        <img src="chickencrispy.jpg" onclick="addToCart('Chicken',45000)">
+        <h3>Chicken Crispy</h3>
+        <p>the crispiest chicken and yummiest chicken there is.</p>
+        <h4>Rp45.000</h4>
+        <button onclick="buyNow('Chicken')">Buy</button>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="page" id="ringan">
+    <h2> Makanan Ringan/dessert</h2>
+
+    <div class="product-container">
+
+      <div class="card">
+        <img src="crispychipsyum.jpg" onclick="addToCart('Keripik',15000)">
+        <h3>chips</h3>
+        <p>Snack renyah favorit.</p>
+        <h4>Rp15.000</h4>
+        <button onclick="buyNow('Keripik')">Buy</button>
+      </div>
+
+      <div class="card">
+        <img src="dubaichewycookieyum.jpg" onclick="addToCart('Popcorn',18000)">
+        <h3>dubai chewy cookie</h3>
+        <p>dubai chewy cookie dalamnya isi kunafa pistachio.</p>
+        <h4>Rp18.000</h4>
+        <button onclick="buyNow('dubai chewy cookie')">Buy</button>
+      </div>
+
+      <div class="card">
+        <img src="donutyum.jpg" onclick="addToCart('Donut',20000)">
+        <h3>Donut</h3>
+        <p>Donut lembut topping coklat.</p>
+        <h4>Rp20.000</h4>
+        <button onclick="buyNow('Donut')">Buy</button>
+      </div>
+
+      <div class="card">
+        <img src="cookiesyum.jpg" onclick="addToCart('Cookies',25000)">
+        <h3>Cookies</h3>
+        <p>Cookies crunchy.</p>
+        <h4>Rp25.000</h4>
+        <button onclick="buyNow('Cookies')">Buy</button>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90" onclick="addToCart('Hotdog',30000)">
+        <h3>Burger</h3>
+        <p>Burger jumbo lezat.</p>
+        <h4>Rp30.000</h4>
+        <button onclick="buyNow('Burger')">Buy</button>
+      </div>
+
+      <div class="card">
+        <img src="dumplings.jpg" onclick="addToCart('dumplings',27000)">
+        <h3>dumplings</h3>
+        <p>Saucy dumplings.</p>
+        <h4>Rp27.000</h4>
+        <button onclick="buyNow('dumplings')">Buy</button>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 FoodMart E-Commerce | Designed by You</p>
+  </footer>
+
+  <div id="cart-modal">
+    <div class="cart-box">
+      <h2>Shopping Cart</h2>
+      <ul id="cart-items"></ul>
+      <h3>Total: Rp<span id="total">0</span></h3>
+      <button onclick="checkout()">Checkout</button>
+      <button onclick="closeCart()">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Plus Jakarta Sans', sans-serif;
+}
+
+body{
+  background:#0c0d11;
+  color:#f1ede9;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* HEADER */
+header{
+  background:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836');
+  background-size:cover;
+  background-position:center;
+  height:380px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+}
+
+header::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg, rgba(12,13,17,0.2) 0%, rgba(12,13,17,0.95) 100%);
+}
+
+.overlay{
+  position:relative;
+  z-index:1;
+  padding:30px;
+  text-align:center;
+  color:white;
+}
+
+.overlay h1{
+  font-family:'Playfair Display', serif;
+  font-size:56px;
+  font-weight:700;
+  letter-spacing:-0.5px;
+  line-height:1.2;
+  text-shadow: 0 4px 24px rgba(0,0,0,0.5);
+}
+
+.overlay p{
+  margin-top:16px;
+  font-weight:400;
+  font-size:13px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  color:#dfd5ca;
+  opacity:0.9;
+}
+
+/* NAVBAR */
+nav{
+  background:rgba(22, 23, 30, 0.8);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 40px;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  border-bottom:1px solid rgba(255,255,255,0.04);
+  height:70px;
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  height:70px;
+  align-items:center;
+}
+
+nav ul li{
+  position:relative;
+  height:70px;
+  display:flex;
+  align-items:center;
+}
+
+nav ul li a{
+  text-decoration:none;
+  color:#b3ab9f;
+  padding:0 22px;
+  display:flex;
+  align-items:center;
+  height:70px;
+  font-weight:500;
+  font-size:13px;
+  letter-spacing:0.8px;
+  text-transform:uppercase;
+  transition:color 0.25s ease;
+}
+
+nav ul li:hover a{
+  color:#e29933;
+}
+
+.dropdown{
+  display:none;
+  position:absolute;
+  background:#1a1b24;
+  top:70px;
+  left:0;
+  min-width:200px;
+  border-radius:0 0 12px 12px;
+  border:1px solid rgba(255,255,255,0.05);
+  box-shadow:0 20px 40px rgba(0,0,0,0.5);
+  padding:10px 0;
+}
+
+.dropdown li{
+  width:100%;
+  height:auto;
+}
+
+.dropdown li a{
+  padding:12px 24px;
+  height:auto;
+  font-size:13px;
+  text-transform:none;
+  letter-spacing:0;
+  color:#cbd5e1;
+}
+
+.dropdown li:hover a{
+  background:rgba(226, 153, 51, 0.08);
+  color:#f3b966;
+}
+
+nav ul li:hover .dropdown{
+  display:block;
+}
+
+.right-menu{
+  display:flex;
+  gap:12px;
+}
+
+.right-menu button{
+  padding:10px 22px;
+  border:1px solid rgba(255,255,255,0.15);
+  border-radius:24px;
+  cursor:pointer;
+  background:transparent;
+  color:#f1ede9;
+  font-weight:600;
+  font-size:12px;
+  letter-spacing:0.5px;
+  text-transform:uppercase;
+  transition:all 0.25s ease;
+}
+
+.right-menu button:hover{
+  background:#f1ede9;
+  color:#0c0d11;
+  border-color:#f1ede9;
+}
+
+.right-menu button:last-of-type {
+  background:#e29933;
+  color:#0c0d11;
+  border:none;
+}
+
+.right-menu button:last-of-type:hover {
+  background:#f3b966;
+}
+
+/* SECTION */
+.page{
+  padding:80px 40px;
+  max-width:1300px;
+  margin:0 auto;
+}
+
+.page h2{
+  text-align:center;
+  margin-bottom:50px;
+  color:#f1ede9;
+  font-family:'Playfair Display',serif;
+  font-size:42px;
+  font-weight:700;
+}
+
+/* PRODUCT GRID & CARDS */
+.product-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));
+  gap:32px;
+}
+
+.card{
+  background:#14151f;
+  border:1px solid rgba(255,255,255,0.03);
+  border-radius:16px;
+  padding:16px;
+  text-align:left; /* Rata kiri terkesan jauh lebih humanis & professional */
+  overflow:hidden;
+  transition:transform 0.3s cubic-bezier(0.215, 0.610, 0.355, 1), box-shadow 0.3s;
+  display:flex;
+  flex-direction:column;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 24px 48px rgba(0,0,0,0.4);
+  border-color:rgba(226, 153, 51, 0.2);
+}
+
+.card img{
+  width:100%;
+  height:210px;
+  object-fit:cover;
+  cursor:pointer;
+  border-radius:10px;
+  transition:transform 0.5s ease;
+}
+
+.card:hover img{
+  transform:scale(1.02);
+}
+
+.card h3{
+  margin-top:20px;
+  color:#f1ede9;
+  font-weight:600;
+  font-size:20px;
+  text-transform: capitalize;
+}
+
+.card p{
+  margin:10px 0 20px 0;
+  color:#94a3b8;
+  font-size:14px;
+  font-weight:400;
+  line-height:1.6;
+  flex-grow:1;
+}
+
+.card h4{
+  color:#e29933;
+  margin-bottom:18px;
+  font-size:22px;
+  font-weight:700;
+}
+
+.card button{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:10px;
+  background:#222433;
+  color:#f1ede9;
+  cursor:pointer;
+  font-weight:600;
+  font-size:13px;
+  letter-spacing:0.5px;
+  text-transform:uppercase;
+  transition:all 0.2s ease;
+}
+
+.card button:hover{
+  background:#e29933;
+  color:#0c0d11;
+}
+
+/* FOOTER */
+footer{
+  background:#090a0d;
+  color:#64748b;
+  text-align:center;
+  padding:40px;
+  margin-top:80px;
+  border-top:1px solid rgba(255,255,255,0.02);
+  font-size:13px;
+  letter-spacing:0.5px;
+}
+
+/* CART MODAL */
+#cart-modal{
+  display:none;
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  background:rgba(5, 5, 8, 0.85);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  justify-content:center;
+  align-items:center;
+  z-index:2000;
+}
+
+.cart-box{
+  background:#161720;
+  border:1px solid rgba(255,255,255,0.06);
+  padding:40px;
+  border-radius:24px;
+  width:480px;
+  max-height:85vh;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+  display:flex;
+  flex-direction:column;
+}
+
+.cart-box h2{
+  margin-bottom:24px;
+  color:#f1ede9;
+  font-family:'Playfair Display',serif;
+  font-size:32px;
+  font-weight:700;
+}
+
+.cart-box ul{
+  margin-bottom:24px;
+  list-style:none;
+  overflow-y:auto;
+}
+
+.cart-box ul li{
+  padding:16px 0;
+  border-bottom:1px solid rgba(255,255,255,0.06);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  color:#cbd5e1;
+  font-size:15px;
+}
+
+.cart-box ul li button{
+  background:rgba(239,68,68,0.1);
+  color:#f87171;
+  border:none;
+  padding:6px 12px;
+  border-radius:6px;
+  cursor:pointer;
+  font-size:12px;
+  transition:all 0.2s;
+}
+
+.cart-box ul li button:hover{
+  background:rgba(239,68,68,0.25);
+}
+
+.cart-box h3{
+  color:#e29933;
+  font-size:24px;
+  margin-bottom:28px;
+  font-weight:700;
+}
+
+.cart-box button{
+  padding:14px 28px;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:600;
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:0.5px;
+  transition:all 0.2s ease;
+}
+
+.cart-box button:first-of-type{
+  background:#e29933;
+  color:#0c0d11;
+  margin-right:12px;
+}
+
+.cart-box button:first-of-type:hover{
+  background:#f3b966;
+}
+
+.cart-box button:last-of-type{
+  background:transparent;
+  color:#94a3b8;
+  border:1px solid rgba(255,255,255,0.1);
+}
+
+.cart-box button:last-of-type:hover{
+  border-color:rgba(255,255,255,0.25);
+  color:#f1ede9;
+}
+
+/* NOTIFICATION */
+.notification{
+    position: fixed;
+    top: 30px;
+    right: -340px;
+    background: #1a1b24;
+    color: #f1ede9;
+    padding: 16px 28px;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 14px;
+    border:1px solid rgba(226, 153, 51, 0.3);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 9999;
+}
+
+.notification.show{
+    right: 30px;
+}
+
+</style>
+
+<script>
+
+let cart = [];
+let total = 0;
+
+// ADD TO CART FUNCTION
+function addToCart(product, price) {
+
+    // Add item into cart array
+    cart.push({
+        name: product,
+        price: price
+    });
+
+    // Add total price
+    total += price;
+
+    // Update cart count
+    document.getElementById("cart-count").innerText = cart.length;
+
+    // Refresh cart display
+    updateCart();
+
+    // Notification
+    showNotification(product + " added to cart!");
+}
+
+// BUY BUTTON FUNCTION
+function buyNow(product, price) {
+
+    // Add item to cart
+    cart.push({
+        name: product,
+        price: price
+    });
+
+    // Add price
+    total += price;
+
+    // Update cart number
+    document.getElementById("cart-count").innerText = cart.length;
+
+    // Refresh cart
+    updateCart();
+
+    // Notification
+    showNotification(product + " successfully purchased and added to cart!");
+}
+
+// UPDATE CART
+function updateCart() {
+
+    const cartItems = document.getElementById("cart-items");
+
+    cartItems.innerHTML = "";
+
+    cart.forEach((item, index) => {
+
+        let li = document.createElement("li");
+
+        li.innerHTML = `
+            ${item.name} - Rp${item.price}
+            <button onclick="removeItem(${index})">❌</button>
+        `;
+
+        cartItems.appendChild(li);
+    });
+
+    document.getElementById("total").innerText = total;
+}
+
+// REMOVE ITEM
+function removeItem(index) {
+
+    total -= cart[index].price;
+
+    cart.splice(index, 1);
+
+    document.getElementById("cart-count").innerText = cart.length;
+
+    updateCart();
+
+    showNotification("Item removed from cart!");
+}
+
+// OPEN CART
+function openCart() {
+    document.getElementById("cart-modal").style.display = "flex";
+}
+
+// CLOSE CART
+function closeCart() {
+    document.getElementById("cart-modal").style.display = "none";
+}
+
+// CHECKOUT
+function checkout() {
+
+    if(cart.length === 0){
+        showNotification("Cart is empty!");
+        return;
+    }
+
+    showNotification("Checkout successful!");
+
+    cart = [];
+    total = 0;
+
+    updateCart();
+
+    document.getElementById("cart-count").innerText = 0;
+
+    closeCart();
+}
+
+// REGISTER BUTTON
+function openRegister() {
+    window.location.href = "register.html";
+}
+
+// PAGE NAVIGATION
+function goToPage(page) {
+    window.location.href = page;
+}
+
+// NOTIFICATION FUNCTION
+function showNotification(message) {
+
+    const notification = document.createElement("div");
+
+    notification.classList.add("notification");
+
+    notification.innerText = message;
+
+    document.body.appendChild(notification);
+
+    // Show animation
+    setTimeout(() => {
+        notification.classList.add("show");
+    }, 100);
+
+    // Remove after 3 sec
+    setTimeout(() => {
+        notification.classList.remove("show");
+
+        setTimeout(() => {
+            notification.remove();
+        }, 500);
+
+    }, 3000);
+}
+</script>
